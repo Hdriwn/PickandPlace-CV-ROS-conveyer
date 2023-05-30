@@ -15,7 +15,8 @@ git clone git@github.com:Hdriwn/pickplace-CV-conveyer-ROS.git
 ```
 
 ## Part 1: Pick and Place Using Conveyor
-![Video](./pickplacev/demonstration/demo.mp4)
+![Animation](./pickplacev/demonstration/file.gif)
+
 ``
 
 ### Launching the System
