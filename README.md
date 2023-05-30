@@ -26,7 +26,7 @@ catkin_make
 ```
 2.Launch the Gazebo simulation:
 ```bash
-roslaunch pickplace demo_gazebo.launch
+roslaunch pickplacev demo_gazebo.launch
 ```
 3,Activate the conveyor belt by running the following command in a new terminal tab:
 ```bash
@@ -40,7 +40,7 @@ rosrun spawn_urdf_sdf spawn
 
 To run the control program, execute the following command:
 ```bash
-rosrun pickplace pickplace_cc
+rosrun pickplacev pickplace_cc
 ```
 ## Part 2: Robotic Manipulator Along Conveyor 
 This part focuses on a robotic manipulator that moves along the conveyor and picks a specified box from it. The system keeps track of the position of every box on the conveyor.
