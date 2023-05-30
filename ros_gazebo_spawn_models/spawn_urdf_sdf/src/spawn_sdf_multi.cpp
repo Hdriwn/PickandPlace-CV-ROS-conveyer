@@ -147,7 +147,7 @@ ros::Publisher counterPub = nh.advertise<std_msgs::Int32>("model_counter", 10);
       //ROS_ERROR("Failed to connect with gazebo server");
     }
 
-    ros::Duration(6.0).sleep(); // Delay between spawns
+    ros::Duration(4.0).sleep(); // Delay between spawns
 
     ros::spinOnce();
   }

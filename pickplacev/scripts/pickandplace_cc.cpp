@@ -254,7 +254,7 @@ int main(int argc, char **argv)
          turnOffGripper(nh, "/ur5/vacuum_gripper6");
          turnOffGripper(nh, "/ur5/vacuum_gripper7");
          turnOffGripper(nh, "/ur5/vacuum_gripper8");
-         ros::Duration(1).sleep();
+         ros::Duration(0.3).sleep();
 
          colorDetected = false;	// Reset the flag for the next iteration
          // return to default picking position
