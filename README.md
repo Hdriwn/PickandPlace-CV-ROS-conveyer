@@ -45,7 +45,7 @@ rosrun pickplacev pickplace_cc
 ```
 **NOTE**: Please add lights near the table for good result
 ## Part 2: Robotic Manipulator Along Conveyor 
-This part focuses on a robotic manipulator that moves along the conveyor and picks a specified box from it. The system keeps track of the position of every box on the conveyor.
+This part focuses on a robotic manipulator that moves along the conveyor and picks a specified box from it. The system keeps track of the position of every box on the conveyor. Please note that this part 2 is yet to work .
 ### Launching the System
 Launch the Gazebo simulation and activate the conveyor belt as in Part 1.
 ```bash
@@ -54,11 +54,11 @@ roslaunch slider_pickplace demo_gazebo.launch
 2. Running the Control Program
 To run the control program, execute the following command:
 ```bash
-rosrun slider_pickplace slider
+rosrun sliding_pickplace slider
 ```
 To pick a specific object and track its current position, set the ID of the object using the service. For example:
 ```bash
 rosservice call /user_request "requested_value: 1"
 ```
-Please note that this project is still a work in progress, and part 2 is yet to work .
+
 
