@@ -43,6 +43,7 @@ To run the control program, execute the following command:
 ```bash
 rosrun pickplacev pickplace_cc
 ```
+**NOTE**: Please add lights near the table for good result
 ## Part 2: Robotic Manipulator Along Conveyor 
 This part focuses on a robotic manipulator that moves along the conveyor and picks a specified box from it. The system keeps track of the position of every box on the conveyor.
 ### Launching the System
