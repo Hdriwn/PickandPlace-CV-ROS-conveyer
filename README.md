@@ -7,7 +7,7 @@ This project focuses on implementing a pick and place system using a conveyor be
 
 ## Installation
 
-Clone this package by running the following command in your terminal:
+Clone this package by running the following command in your src folder of your workspace in terminal:
 
 ```bash
 
@@ -23,7 +23,8 @@ git clone git@github.com:Hdriwn/pickplace-CV-conveyer-ROS.git
 
 1. Build the package using Catkin:
 ```bash
-catkin_make
+catkin build
+source devel/setup.bash
 ```
 2.Launch the Gazebo simulation:
 ```bash
@@ -31,16 +32,19 @@ roslaunch pickplacev demo_gazebo.launch
 ```
 3,Activate the conveyor belt by running the following command in a new terminal tab:
 ```bash
+source devel/setup.bash
 rosservice call /conveyor/control "power: 10.0"
 ```
 4. Now spawn the blocks
 ```bash
+source devel/setup.bash
 rosrun spawn_urdf_sdf spawn
 ```
 5. Running the Control Program
 
 To run the control program, execute the following command:
 ```bash
+source devel/setup.bash
 rosrun pickplacev pickplace_cc
 ```
 **NOTE**: Please add lights near the table for good result
