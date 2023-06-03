@@ -55,14 +55,24 @@ Launch the Gazebo simulation and activate the conveyor belt as in Part 1.
 ```bash
 roslaunch slider_pickplace demo_gazebo.launch
 ```
-2. Running the Control Program
+3,Activate the conveyor belt by running the following command in a new terminal tab:
+```bash
+source devel/setup.bash
+rosservice call /conveyor/control "power: 10.0"
+```
+4. Now spawn the blocks
+```bash
+source devel/setup.bash
+rosrun spawn_urdf_sdf spawn
+5. Running the Control Program
 To run the control program, execute the following command:
 ```bash
 rosrun sliding_pickplace slider
 ```
-To pick a specific object and track its current position, set the ID of the object using the service. For example:
+6. To pick a specific object and track its current position, set the ID of the object using the service. For example:
 ```bash
 rosservice call /user_request "requested_value: 1"
 ```
+You can view the name of the latest block being added listening to the topic "model_counter"
 
 
