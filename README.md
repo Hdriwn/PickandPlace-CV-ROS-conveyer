@@ -53,7 +53,7 @@ This part focuses on a robotic manipulator that moves along the conveyor and pic
 ### Launching the System
 Launch the Gazebo simulation and activate the conveyor belt as in Part 1.
 ```bash
-roslaunch slider_pickplace demo_gazebo.launch
+roslaunch sliding_pickplace demo_gazebo.launch
 ```
 3,Activate the conveyor belt by running the following command in a new terminal tab:
 ```bash
