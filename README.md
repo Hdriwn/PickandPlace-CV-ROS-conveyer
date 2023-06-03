@@ -64,6 +64,7 @@ rosservice call /conveyor/control "power: 10.0"
 ```bash
 source devel/setup.bash
 rosrun spawn_urdf_sdf spawn
+```
 5. Running the Control Program
 To run the control program, execute the following command:
 ```bash
