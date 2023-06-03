@@ -64,7 +64,7 @@ joint_limits:
     max_acceleration: 0
   world_joint:
     has_velocity_limits: true
-    max_velocity: 2
+    max_velocity: 10 
     has_acceleration_limits: false
     max_acceleration: 0
   wrist_1_joint:

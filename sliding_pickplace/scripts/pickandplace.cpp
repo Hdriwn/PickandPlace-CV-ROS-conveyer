@@ -89,7 +89,7 @@ move_group_interface_arm.setJointValueTarget(move_group_interface_arm.getNamedTa
 ROS_INFO_NAMED("tutorial", "place position reached");
 
 // Wait for 10 seconds
-ros::Duration(2.0).sleep();
+ros::Duration(0.0).sleep();
 
 
 // 2. Move to home position
@@ -116,7 +116,7 @@ turnOffGripper(nh, "/ur5/vacuum_gripper6");
 turnOffGripper(nh, "/ur5/vacuum_gripper7");
 turnOffGripper(nh, "/ur5/vacuum_gripper8");
 
-ros::Duration(2.0).sleep(); 
+ros::Duration(0.0).sleep(); 
 
     // 5. Close the  gripper
 ROS_INFO_NAMED("tutorial","vacuume onbegin");
@@ -141,7 +141,7 @@ ROS_INFO_NAMED("tutorial", "attempting plaaace");
 move_group_interface_arm.setJointValueTarget(move_group_interface_arm.getNamedTargetValues("place"));
 move_group_interface_arm.move();
   // Wait for a small duration before checking the state again
-  ros::Duration(2).sleep();
+  ros::Duration(0).sleep();
 
 ROS_INFO_NAMED("tutorial", "plaace position reached");
 
@@ -158,7 +158,7 @@ turnOffGripper(nh, "/ur5/vacuum_gripper6");
 turnOffGripper(nh, "/ur5/vacuum_gripper7");
 turnOffGripper(nh, "/ur5/vacuum_gripper8");
 
-ros::Duration(2.0).sleep(); 
+ros::Duration(0.0).sleep(); 
  // go the the default config
 move_group_interface_arm.setJointValueTarget(move_group_interface_arm.getNamedTargetValues("pick"));
 

@@ -28,40 +28,12 @@ hardware_interface:
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS
-joint_state_controller:
-  type: joint_state_controller/JointStateController
-  publish_rate: 50
-controller_list:
-  - name: moving_base_controller
-    action_ns: follow_joint_trajectory
-    default: True
-    type: FollowJointTrajectory
-    joints:
-      - world_joint
-    gains: # Required because we're controlling a velocity interface
-      world_joint: {p: o,  d: 1, i: 1, i_clamp: 1} # Smaller 'p' term, since ff term does most of the 
-  - name: ur5_arm_controller
-    action_ns: follow_joint_trajectory
-    default: True
-    type: FollowJointTrajectory
-    joints:
-      - shoulder_pan_joint
-      - shoulder_lift_joint
-      - elbow_joint
-      - wrist_1_joint
-      - wrist_2_joint
-      - wrist_3_joint
-
 moving_base_controller:
-  type: effort_controllers/JointTrajectoryController
+  type: position_controllers/JointTrajectoryController
   joints:
     - world_joint
-  gains:
-    world_joint:
-      p: 5000
-      d: 1
-      i: 0.1
-      i_clamp: 100
+#  gains:
+#    world_joint: {p: 100,  d: 1, i: 1, i_clamp: 1}
 ur5_arm_controller:
   type: effort_controllers/JointTrajectoryController
   joints:
@@ -102,3 +74,26 @@ ur5_arm_controller:
       d: 1
       i: 0.1
       i_clamp: 100
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+controller_list:
+  - name: moving_base_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - world_joint
+  - name: ur5_arm_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+
+
