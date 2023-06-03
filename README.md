@@ -55,7 +55,7 @@ Launch the Gazebo simulation and activate the conveyor belt as in Part 1.
 ```bash
 roslaunch sliding_pickplace demo_gazebo.launch
 ```
-3,Activate the conveyor belt by running the following command in a new terminal tab:
+3. Activate the conveyor belt by running the following command in a new terminal tab:
 ```bash
 source devel/setup.bash
 rosservice call /conveyor/control "power: 10.0"
